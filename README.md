@@ -1,3 +1,14 @@
+# Preface for RMS
+
+This is a fork of AWS "distributed load testing" solution which has a frontend, a series of lambda components, and runs a taurus image that will run jmeter tests. There is a need within RMS to have a more flexible load testing setup that allows any amount of load tests to be executed concurrently, this solution will get us 90% of the way there, there are things that we would like to do with this, or use this as a logical basis:
+
+- this solution is deployed using commands that deploy stacks through S3, it is not rms standard with CI/CD
+- the solution uses taurus with jmeter, where the devex is apparently not great, it would be preferable to be able to use and provide gatling scripts as is standard in RMS, this is apparently an open issue in the base repo (https://github.com/aws-solutions/distributed-load-testing-on-aws/issues/95)
+- deployment of images is not done through cosmos, so has no ability to add in any cosmos certs, although thankfully this is not an issue as currently all of our apis are http within the vpc
+- this is a lot of javascript and typescript, languages that rms don't maintain, therefore it would be beneficial to migrate this to a scala stack eventualy
+
+
+
 # Distributed Load Testing on AWS
 
 The Distributed Load Testing Solution leverages managed, highly available and highly scalable AWS services to effortlessly create and simulate thousands of connected users generating a selected amount of transactions per second, originating from up to 5 simultaneous AWS regions. As a result, developers can understand the behavior of their applications at scale and at load to identify any bottleneck problems before they deploy to Production.
