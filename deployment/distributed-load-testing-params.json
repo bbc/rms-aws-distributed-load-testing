@@ -1,0 +1,22 @@
+[
+    {
+        "ParameterKey": "AdminName",
+        "ParameterValue": "rms-codepipeline"
+    },
+    {
+        "ParameterKey": "AdminEmail",
+        "ParameterValue": "rms-codepipeline@bbc.co.uk"
+    },
+    {
+        "ParameterKey": "ExistingVPCId",
+        "ParameterValue": "vpc-6c1ebc09"
+    },
+    {
+        "ParameterKey": "ExistingSubnetA",
+        "ParameterValue": "subnet-5fd00b06"
+    },
+    {
+        "ParameterKey": "ExistingSubnetB",
+        "ParameterValue": "subnet-1527b970"
+    }
+]
